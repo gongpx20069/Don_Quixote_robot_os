@@ -6,13 +6,11 @@
 import json
 import urllib2
 import sys
+from control.settings import ChatFather
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-class Chat(object):
-    key = "******"  # turing123网站的key
-    apiurl = "http://www.tuling123.com/openapi/api?"
-
+class Chat(ChatFather):
     def send(self,info):
         url = self.apiurl + 'key=' + self.key + '&' + 'info=' + info
         url = url.decode('utf-8')
