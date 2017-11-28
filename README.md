@@ -12,3 +12,4 @@
 PyAudio：用于语音交互；
 Opencv2：用于（人脸识别？），图像处理；
 jeiba：用于NLP分词等；
+pydub:用于mp3转换wav，PyAudio不能播放mp3；
