@@ -13,3 +13,7 @@ PyAudio：用于语音交互；
 Opencv2：用于（人脸识别？），图像处理；
 jeiba：用于NLP分词等；
 pydub:用于mp3转换wav，PyAudio不能播放mp3；
+
+注意：项目在下载后主要改动control文件夹中的settings.py和control_robot.py
+settings.py:配置文件，里面有提示的所有需要的百度语音API的key和图灵机器人API；
+control_robot:关于所有机器人的控制文件可以在里面编写，包括对语音、人脸等的识别；
