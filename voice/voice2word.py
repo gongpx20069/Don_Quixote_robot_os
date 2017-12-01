@@ -11,7 +11,7 @@ class voice2word(BaiduVoiceFather):
             "rate": 16000,
             "channel": 1,
             "token":self.gettoken(),
-            "cuid": '303648105471511959505',
+            "cuid": self.cuid,
             "len": len(d),
             "speech": base64.encodestring(d).replace('\n', '')
         }
