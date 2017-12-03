@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 from voice import word_robot
 from voice import word2voice
-
-def robot(word):
-    print '>',word
-    re_word = word_robot.robot(word)
-    print '#',re_word
-    word2voice.playword(re_word)
+from voice import voice2word
+from voice import audio
+def interactive():
+    audio.waitRecord(8000,1)
+    inputword = voice2word.getvoiceText()
+    print '>',inputword
+    outputword = word_robot.robot(inputword)
+    word2voice.playword(outputword)
+    print '#',outputword
 
 while True:
-    robot(raw_input())
+    interactive()
