@@ -16,3 +16,15 @@ class BaiduVoiceFather(object):
 class ChatFather(object):
     key = ""  # turing123网站的key
     apiurl = "http://www.tuling123.com/openapi/api?"
+
+class BFRFather(object):
+    access_key = ''#access_token为官网获取的AK
+    secret_key = ''#secret_key为官网获取的secret_key
+     # client_id 为官网获取的AK， client_secret 为官网获取的SK
+    def gettoken(self):
+        host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=%s&client_secret=%s'%(self.access_key,self.secret_key)
+        request = urllib2.Request(host)
+        request.add_header('Content-Type', 'application/json; charset=UTF-8')
+        response = urllib2.urlopen(request)
+        content = json.loads(response.read())
+        return content['access_token']
