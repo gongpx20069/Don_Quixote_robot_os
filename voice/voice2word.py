@@ -5,7 +5,7 @@ import base64
 from control.settings import BaiduVoiceFather
 class voice2word(BaiduVoiceFather):
     def getText(self):
-        d = open('temp.wav','rb').read()
+        d = open('temp1.wav','rb').read()
         data={
             "format": "wav",
             "rate": 16000,
@@ -18,6 +18,7 @@ class voice2word(BaiduVoiceFather):
         request = urllib2.Request(self.texturl, data=json.dumps(data),
                                headers={'Content-Type': 'application/json'})
         result = json.loads(urllib2.urlopen(request).read())
+        print result
         return result['result'][0]
 v = voice2word()
 def getvoiceText():
