@@ -12,8 +12,8 @@ CHUNK = 1024
 CHANNELS = 2
 RATE = 8000 #44100
 RECORD_SECONDS = 5
-def playaudio():
-    wf = wave.open(r'temp.wav', 'rb')
+def playaudio(filename='temp.wav'):
+    wf = wave.open(filename, 'rb')
     p = pyaudio.PyAudio()
     # 打开数据流
     stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
