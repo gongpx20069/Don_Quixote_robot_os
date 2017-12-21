@@ -5,15 +5,24 @@
 只要有想法就会上传
 
 目前需要的网络API：
+
 图灵机器人API；
+
 百度语音API;
+
 百度人脸识别API;
 
+
 目前需要依赖包：
+
 PyAudio：用于语音交互；
+
 Opencv2：用于人脸识别，图像处理；
+
 jeiba：用于NLP分词等；
+
 pydub:用于mp3转换wav，PyAudio不能播放mp3；
+
 
 注意：项目在下载后主要改动control文件夹中的settings.py和control_robot.py
 settings.py:配置文件，里面有提示的所有需要的百度语音API的key和图灵机器人API；
