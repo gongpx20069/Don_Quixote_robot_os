@@ -30,9 +30,9 @@ control_robot:关于所有机器人的控制文件可以在里面编写，包括
 
 # 开源许可证：
 
-MIT License
+The MIT License (MIT)
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2017 Peixian Gong
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
